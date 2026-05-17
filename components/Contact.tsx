@@ -62,13 +62,13 @@ export default function Contact() {
 
             <div className="space-y-4 font-mono text-sm">
               <a
-                href="mailto:aqn5501@psu.edu"
+                href="mailto:amsalmohdn03@gmail.com"
                 className="flex items-baseline gap-4 group"
               >
                 <span className="text-muted text-xs uppercase tracking-wider w-20">
                   Email
                 </span>
-                <span className="link-underline">aqn5501@psu.edu</span>
+                <span className="link-underline">amsalmohdn03@gmail.com</span>
               </a>
               <div className="flex items-baseline gap-4">
                 <span className="text-muted text-xs uppercase tracking-wider w-20">
@@ -77,7 +77,7 @@ export default function Contact() {
                 <span>+1 (814) 441-2967</span>
               </div>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/amsalmohammad"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-baseline gap-4 group"
@@ -85,7 +85,8 @@ export default function Contact() {
                 <span className="text-muted text-xs uppercase tracking-wider w-20">
                   LinkedIn
                 </span>
-                <span className="link-underline">/in/amsal-nizamuddin</span>
+                <span className="link-underline">/in/amsalmohammad</span>
+              </a>
               </a>
             </div>
           </div>
