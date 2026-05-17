@@ -7,6 +7,7 @@ const projects = [
     metric: "70%",
     metricLabel: "cost efficiency gain",
     year: "2024 —",
+    tags: ["AI Automation", "Ops Tooling", "Founder"],
   },
   {
     title: "Challenger Disaster Research",
@@ -16,6 +17,7 @@ const projects = [
     metric: "1986",
     metricLabel: "case study",
     year: "2021 — 2022",
+    tags: ["Materials Science", "Simulation", "Research"],
   },
   {
     title: "Penn State Robotics",
@@ -25,6 +27,7 @@ const projects = [
     metric: "2nd",
     metricLabel: "place — innovation",
     year: "2018 — 2021",
+    tags: ["Robotics", "Team Lead", "Competition"],
   },
 ];
 
@@ -32,23 +35,23 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="py-32 md:py-48 px-6 md:px-10 border-t border-ink/10"
+      className="py-32 md:py-48 px-6 md:px-10 border-t border-border"
     >
       <div className="max-w-6xl mx-auto">
         <div className="flex items-baseline justify-between mb-20">
-          <h2 className="font-serif text-5xl md:text-7xl font-light tracking-tight">
-            Projects <span className="italic text-accent">& research</span>
+          <h2 className="font-sans font-bold text-5xl md:text-7xl tracking-tight text-paper">
+            Projects <span className="text-accent">&amp; research</span>
           </h2>
-          <p className="font-mono text-xs uppercase tracking-[0.3em] text-muted hidden md:block">
-            ✱ Side work
+          <p className="label-mono hidden md:block">
+            03 / projects
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-4">
           {projects.map((p, i) => (
             <article
               key={p.title}
-              className="group relative bg-paper border border-ink/15 rounded-sm p-7 md:p-8 hover:border-accent transition-colors duration-500 min-h-[420px] flex flex-col justify-between"
+              className="group bg-surface border border-border rounded p-7 md:p-8 hover:border-accent transition-colors duration-500 min-h-[420px] flex flex-col justify-between"
             >
               <div>
                 <div className="flex items-start justify-between mb-8">
@@ -60,23 +63,35 @@ export default function Projects() {
                   </span>
                 </div>
 
-                <h3 className="font-serif text-3xl font-light leading-tight mb-2">
+                <h3 className="font-sans font-semibold text-2xl text-paper leading-tight mb-2">
                   {p.title}
                 </h3>
                 <p className="font-mono text-xs uppercase tracking-wider text-accent mb-6">
                   {p.subtitle}
                 </p>
-                <p className="text-ink/75 text-sm leading-relaxed">
+                <p className="text-muted text-sm leading-relaxed">
                   {p.description}
                 </p>
               </div>
 
-              <div className="mt-8 pt-6 border-t border-ink/10">
-                <div className="font-serif text-5xl font-light leading-none">
-                  {p.metric}
+              <div>
+                <div className="mt-8 pt-6 border-t border-border mb-4">
+                  <div className="font-sans font-bold text-4xl text-paper leading-none">
+                    {p.metric}
+                  </div>
+                  <div className="font-mono text-xs uppercase tracking-wider text-muted mt-2">
+                    {p.metricLabel}
+                  </div>
                 </div>
-                <div className="font-mono text-xs uppercase tracking-wider text-muted mt-2">
-                  {p.metricLabel}
+                <div className="flex flex-wrap gap-1.5">
+                  {p.tags.map((t) => (
+                    <span
+                      key={t}
+                      className="text-[10px] font-mono uppercase tracking-wider px-2 py-1 bg-ink border border-border text-muted rounded"
+                    >
+                      {t}
+                    </span>
+                  ))}
                 </div>
               </div>
             </article>

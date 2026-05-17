@@ -42,15 +42,15 @@ const marqueeItems = [
 
 export default function Skills() {
   return (
-    <section className="border-t border-ink/10">
+    <section className="border-t border-border">
       {/* Marquee */}
-      <div className="py-10 overflow-hidden border-b border-ink/10">
+      <div className="py-10 overflow-hidden border-b border-border">
         <div className="flex marquee-track whitespace-nowrap">
           {[...marqueeItems, ...marqueeItems].map((item, i) => (
             <span
               key={i}
-              className={`mx-6 font-serif text-4xl md:text-5xl font-light ${
-                item === "✱" ? "text-accent" : ""
+              className={`mx-6 font-mono text-3xl md:text-4xl opacity-50 hover:opacity-100 transition-opacity duration-200 cursor-default ${
+                item === "✱" ? "text-accent" : "text-paper"
               }`}
             >
               {item}
@@ -63,11 +63,9 @@ export default function Skills() {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-12 gap-10">
             <div className="md:col-span-3">
-              <p className="font-mono text-xs uppercase tracking-[0.3em] text-muted">
-                ✱ Toolkit
-              </p>
-              <h2 className="font-serif text-4xl md:text-5xl font-light mt-4 leading-tight">
-                What I <span className="italic">work with</span>
+              <p className="label-mono">04 / toolkit</p>
+              <h2 className="font-sans font-bold text-3xl md:text-4xl tracking-tight text-paper mt-4 leading-tight">
+                What I <span className="text-accent">work with</span>
               </h2>
             </div>
 
@@ -81,7 +79,7 @@ export default function Skills() {
                     {g.items.map((item) => (
                       <li
                         key={item}
-                        className="font-serif text-xl md:text-2xl font-light"
+                        className="font-sans text-lg md:text-xl font-light text-paper/80"
                       >
                         {item}
                       </li>

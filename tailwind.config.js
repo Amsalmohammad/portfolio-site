@@ -7,15 +7,17 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        serif: ["var(--font-serif)", "serif"],
+        serif: ["var(--font-sans)", "sans-serif"],
         sans: ["var(--font-sans)", "sans-serif"],
         mono: ["var(--font-mono)", "monospace"],
       },
       colors: {
-        ink: "#0f0e0c",
-        paper: "#f5f1ea",
-        accent: "#c8553d",
-        muted: "#6b6760",
+        ink: "#0a0a0a",
+        paper: "#fafafa",
+        accent: "#00d4a0",
+        muted: "#a3a3a3",
+        border: "#1f1f1f",
+        surface: "#141414",
       },
     },
   },
