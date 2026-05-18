@@ -72,7 +72,31 @@ export default function Contact() {
             </div>
           </div>
 
-          <form onSubmit={handleSubmit} className="md:col-span-7 space-y-6 md:pl-10 md:border-l border-border">
+          <div className="md:col-span-7 md:pl-10 md:border-l border-border">
+            {/* Cal.com CTA */}
+            <div className="mb-10">
+              <p className="label-mono mb-4">
+                {"// prefer to talk? grab time directly →"}
+              </p>
+              <a
+                href="https://cal.com/amsal-mohammad-7da80l/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block w-full md:w-auto text-center font-mono text-sm uppercase tracking-wider px-8 py-3 border border-accent text-accent bg-transparent hover:bg-accent hover:text-ink transition-colors duration-300 rounded-full"
+              >
+                Book a 30-min call
+              </a>
+            </div>
+
+            {/* Divider */}
+            <div className="relative mb-10">
+              <div className="border-t border-border" />
+              <span className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 bg-ink px-4 label-mono">
+                {"// or send a message"}
+              </span>
+            </div>
+
+            <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label className="font-mono text-xs uppercase tracking-[0.2em] text-muted block mb-2">Name</label>
               <input
@@ -123,6 +147,7 @@ export default function Contact() {
               )}
             </div>
           </form>
+          </div>
         </div>
       </div>
     </section>
